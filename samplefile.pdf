@@ -1,0 +1,22 @@
+node {
+  stage('JIRA') {
+    withEnv(['JIRA_SITE=jira-site']) {
+      def transitionInput =
+      [
+          transition: [
+              id: '21'
+          ]
+      ]
+
+      jiraTransitionIssue idOrKey: 'CICD-10', input: transitionInput
+    }
+  }
+}
+
+id:11, name:To Do
+[id:21, name:In Progress
+id:31, name:Done,
+id:41, name:Test
+
+Invalid condition "fail" - valid conditions are [always, changed, fixed, regression, aborted, success, unsuccessful, unstable, failure, notBuilt, cleanup] @ line 35, column 5.
+   				fail{
